@@ -1,16 +1,16 @@
 all: hello
 
 hello: main.o factorial.o hello.o
-	g++ main.o factorial.o hello.o -o hello
+	link.exe /OUT:hello.exe main.o factorial.o hello.o
 
 main.o: main.cpp
-	g++ -c main.cpp
+	cl.exe /c main.cpp
 
 factorial.o: factorial.cpp
-	g++ -c factorial.cpp
+	cl.exe /c factorial.cpp  
 
 hello.o: hello.cpp
-	g++ -c hello.cpp
+	cl.exe /c hello.cpp
 
 clean:
-	rm -rf *.o hello
+	del *.o hello.exe
