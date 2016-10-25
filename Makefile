@@ -1,7 +1,7 @@
 all: hello
 
-hello: main.o factorial.o hello.o
-	link.exe /OUT:hello.exe main.o factorial.o hello.o
+hello: main.obj factorial.obj hello.obj
+	link.exe /OUT:hello.exe main.obj factorial.obj hello.obj
 
 main.o: main.cpp
 	cl.exe /c main.cpp
